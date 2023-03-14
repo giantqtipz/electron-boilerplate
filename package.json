@@ -1,0 +1,65 @@
+{
+  "name": "Electron Boilerplate",
+  "version": "1.0.0",
+  "description": "Electron Boilerplate with Electron, Node, React, Typescript, Jest",
+  "keywords": [
+    "node",
+    "react",
+    "typescript",
+    "jest",
+    "electron"
+  ],
+  "repository": {
+      "type": "git",
+      "url": "www.github.com/giantqtipz/electron-boilerplate"
+    },
+  "main": "./dist/main/main.js",
+  "scripts": {
+    "build:prod": "NODE_ENV=production tsc --outDir ./build && NODE_ENV=production webpack --mode=production",
+    "build:dev": "NODE_ENV=development tsc --outDir ./dist && NODE_ENV=development webpack --mode=development --watch",
+    "start:prod": "nodemon --exec NODE_ENV=production electron .",
+    "start:dev": "nodemon --exec NODE_ENV=development electron .",
+    "test": "jest",
+    "test:watch": "npm run test --watch"
+  },
+  "author": "Abimanyu Saridjo",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "electron": "^23.1.3",
+    "nodemon": "^2.0.21",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sass": "^1.57.1"
+  },
+  "devDependencies": {
+    "@types/electron": "^1.6.10",
+    "@types/jest": "^29.2.4",
+    "@types/react": "^16.9.56",
+    "@types/react-dom": "^18.0.11",
+    "@typescript-eslint/eslint-plugin": "^4.7.0",
+    "@typescript-eslint/parser": "^4.7.0",
+    "concurrently": "^7.6.0",
+    "css-loader": "^5.0.1",
+    "dotenv-webpack": "^8.0.1",
+    "eslint": "^7.13.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "html-webpack-plugin": "^4.5.2",
+    "node-dev": "^6.2.0",
+    "node-sass": "^8.0.0",
+    "prettier": "^2.1.2",
+    "sass-loader": "^10.1.0",
+    "style-loader": "^2.0.0",
+    "ts-jest": "^29.0.3",
+    "ts-loader": "^8.4.0",
+    "typescript": "^5.1.0-dev.20230313",
+    "webpack": "^5.4.0",
+    "webpack-cli": "^4.2.0"
+  }
+}

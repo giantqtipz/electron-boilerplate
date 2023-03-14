@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "ES2021",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "sourceMap": true,
+    "lib": ["dom", "es2021"],
+    "allowJs": true,
+    "jsx": "react-jsx",
+    "rootDirs": ["main"],
+    "strict": true,
+    "types": ["node", "jest"],
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "noEmit": false,
+    "incremental": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["renderer/**/*", "main/**/*"]
+}
