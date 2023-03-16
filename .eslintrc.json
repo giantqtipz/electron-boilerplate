@@ -1,0 +1,42 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true,
+        "jest": true
+    },
+    "extends": [
+        "airbnb",
+        "eslint:recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:import/typescript",
+        "plugin:jest/recommended",
+        "plugin:jsx-a11y/recommended",
+        "plugin:prettier/recommended",
+        "plugin:react/recommended",
+        "plugin:react-hooks/recommended"
+    ],
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+    "plugins": ["@typescript-eslint", "jest", "jsx-a11y", "react"],
+    "ignorePatterns": ["./node_modules", "./build", "./dist"],
+    "rules": {
+        "camelcase": "off",
+        "prettier/prettier": [
+            "error",
+            {
+              "singleQuote": true
+            },
+            {
+              "endOfLine": "auto"
+            }
+        ],
+        "semi": 2,
+        "@typescript-eslint/camelcase": "off",
+        "@typescript-eslint/no-use-before-define": "warn"
+    }
+}

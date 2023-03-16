@@ -10,17 +10,18 @@
     "electron"
   ],
   "repository": {
-      "type": "git",
-      "url": "www.github.com/giantqtipz/electron-boilerplate"
-    },
-  "main": "./dist/main/main.js",
+    "type": "git",
+    "url": "www.github.com/giantqtipz/electron-boilerplate"
+  },
+  "main": "./build/main/main.js",
   "scripts": {
     "build:prod": "NODE_ENV=production tsc --outDir ./build && NODE_ENV=production webpack --mode=production",
     "build:dev": "NODE_ENV=development tsc --outDir ./dist && NODE_ENV=development webpack --mode=development --watch",
     "start:prod": "nodemon --exec NODE_ENV=production electron .",
     "start:dev": "nodemon --exec NODE_ENV=development electron .",
     "test": "jest",
-    "test:watch": "npm run test --watch"
+    "test:watch": "npm run test --watch",
+    "lint": "eslint -ext .tsx,.ts,.js"
   },
   "author": "Abimanyu Saridjo",
   "license": "ISC",
@@ -38,14 +39,16 @@
     "@types/react": "^16.9.56",
     "@types/react-dom": "^18.0.11",
     "@typescript-eslint/eslint-plugin": "^4.7.0",
-    "@typescript-eslint/parser": "^4.7.0",
+    "@typescript-eslint/parser": "^4.33.0",
     "concurrently": "^7.6.0",
     "css-loader": "^5.0.1",
     "dotenv-webpack": "^8.0.1",
+    "electron-forge": "^5.2.4",
     "eslint": "^7.13.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^6.15.0",
     "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jest": "^27.2.1",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.21.5",
@@ -58,8 +61,16 @@
     "style-loader": "^2.0.0",
     "ts-jest": "^29.0.3",
     "ts-loader": "^8.4.0",
-    "typescript": "^5.1.0-dev.20230313",
+    "typescript": "^4.9.5",
     "webpack": "^5.4.0",
     "webpack-cli": "^4.2.0"
+  },
+  "config": {
+    "forge": {
+      "packagerConfig": {
+        "dir": "./build",
+        "icon": "./assets/icon.png"
+      }
+    }
   }
 }
