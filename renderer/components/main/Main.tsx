@@ -4,7 +4,7 @@ import './main.scss';
 const Main: React.FC = () => {
   return (
     <>
-      <h1>Im Another Three!</h1>
+      <h1>Im Alive!</h1>
     </>
   );
 };
